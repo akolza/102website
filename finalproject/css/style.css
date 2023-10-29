@@ -18,10 +18,12 @@ Website: sw.cs.wwu.edu/~kolzea/CS102/127/webproject/index.html
 TODO
 update TOC
 efficiency - image size
-change banner - move logo up from footer?
-choose color scheme
-create services and inspiration pages
-border radius?
+links on home, portfolio
+make table on services
+?on inspo make artwork info hover?
+?sticky nav/header?
+use javascript on one page
+HTML and CSS validation
 
 */
 
@@ -37,33 +39,26 @@ body {
     line-height: 1.25;
 }
 #wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .banner{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/waterfront-6843614_1280.jpg);
-    width: 100%;
-    height: 15vh;
-    background-size: cover;
-
-    /* position */
-    background-position: center;
-    padding: 60px 10px; 
-    margin-top: 20px;
+    background-color: #998B62;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
 }
-
-.logo{
+.top{
     background-image: url(../images/CamScanner\ 06-04-2022\ 09.30_1.jpg);
-    float: left;
-    width: 20%;
-    height: 15vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
 nav {
-    text-align: right;
-    float: right;
-    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
 
 nav ul{
@@ -92,15 +87,22 @@ h1{
     border: solid;
     padding: 5px;
     letter-spacing: 1.5px;
+    background-color: #A94C18;
 }
 
-.floatleft{
-    float: left;
-    padding: 20px;
+.twocolumn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.floatright{
-    float: right;
-    padding: 20px;
+.twocolumn h3{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.column{
+    padding: 15px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
 }
 
 .logo{
@@ -110,23 +112,19 @@ h1{
     position: absolute;
 }
 
-.exhibition {
-    /* background-image: url(../images/exhibition.jpg); */
-    /* height: auto;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: auto; */
-}
-
 .center{
+    margin-top: 15px;
+    border: 10px solid #D0BF8D;
     margin-right: 30%;
     margin-left: 30%;
-    padding: 20px 0px;
 }
 
+
+.exhibition{
+    padding-top: 20px;;
+}
 footer{
-    background-color: grey;
+    background-color: #998B62;
     position: relative;
 }
 footer p{
@@ -138,11 +136,15 @@ footer p{
 
 }
 
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
 .gallery-item{
-    width: 200px;
     margin: 10px;
-    float: left;
     transition: 0.2s;
+    background-color: lightgray;
 }
 
 .gallery-item img{
@@ -154,7 +156,19 @@ footer p{
     font-weight: bold;
 }
 .gallery-item:hover{
-    box-shadow: 0 0 4px gray;
-    cursor: pointer;
+    box-shadow: 0 0 10px #998B62;
+    /* cursor: pointer; */
     /* csciprojects.us */
+}
+
+hr{
+    border: 2px solid #D0BF8D;
+}
+
+dt{
+    font-size: 1.25em;
+}
+dl{
+    padding: 10px;
+    background-color: lightgray;
 }
