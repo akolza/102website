@@ -8,20 +8,29 @@ Website: sw.cs.wwu.edu/~kolzea/CS102/127/webproject/index.html
 /* Table of Content */
 /* 
 1. Google Font 
-2. Body
-3. Wrapper
-4. Banner
-5. Nav
- */
+2. box sizing
+3. Body
+4. Wrapper
+5. Banner
+6. top
+7. Nav + nav subclasses
+8. h1
+9. twocolumn + subclass h3 (about, services)
+10. column (about, services)
+11. center (about)
+12. gallery (portfolio)
+13. gallery-item + subclasses (portfolio)
+14. hr, dt, dl (inspiration)
+15. exhibition (home, services)
+16. logo
+17. footer + p subclass & clearfix
+*/
 
 /* 
 TODO
-update TOC
-efficiency - image size
 links on home, portfolio
 make table on services
-?on inspo make artwork info hover?
-?sticky nav/header?
+experiment with more box shadows, more visual effects
 use javascript on one page
 HTML and CSS validation
 
@@ -31,7 +40,7 @@ HTML and CSS validation
 
 * {
     box-sizing: border-box;
- }
+}
  
 body {
     background-color: #f4f4f4;
@@ -43,6 +52,9 @@ body {
     margin: 0 auto;
 }
 
+.header{
+    width: 100%;
+}
 .banner{
     background-color: #998B62;
     display: grid;
@@ -78,10 +90,6 @@ nav ul li a{
     color: white;
 }
 
-.clearfix{
-    clear: both;
-}
-
 h1{
     text-align: center;
     border: solid;
@@ -105,35 +113,11 @@ h1{
     border-radius: 10px;
 }
 
-.logo{
-    float: left;
-    height: 100%;
-    width: auto;
-    position: absolute;
-}
-
 .center{
     margin-top: 15px;
     border: 10px solid #D0BF8D;
     margin-right: 30%;
     margin-left: 30%;
-}
-
-
-.exhibition{
-    padding-top: 20px;;
-}
-footer{
-    background-color: #998B62;
-    position: relative;
-}
-footer p{
-    padding-left: 60px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    /* padding-top: 10px; */
-
 }
 
 .gallery{
@@ -146,11 +130,9 @@ footer p{
     transition: 0.2s;
     background-color: lightgray;
 }
-
 .gallery-item img{
     width: 100%;
 }
-
 .gallery-item p{
     text-align: center;
     font-weight: bold;
@@ -164,7 +146,6 @@ footer p{
 hr{
     border: 2px solid #D0BF8D;
 }
-
 dt{
     font-size: 1.25em;
 }
@@ -172,3 +153,27 @@ dl{
     padding: 10px;
     background-color: lightgray;
 }
+
+.exhibition{
+    padding-top: 20px;
+}
+
+.logo{
+    float: left;
+    height: 100%;
+    width: auto;
+    position: absolute;
+}
+footer{
+    background-color: #998B62;
+    position: relative;
+}
+footer p{
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.clearfix{
+    clear: both;
+} 
