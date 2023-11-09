@@ -21,16 +21,18 @@ Website: sw.cs.wwu.edu/~kolzea/CS102/127/webproject/index.html
 12. gallery (portfolio)
 13. gallery-item + subclasses (portfolio)
 14. hr, dt, dl (inspiration)
-15. exhibition (home, services)
-16. logo
-17. footer + p subclass & clearfix
+15. table
+16. exhibition (home, services)
+17. logo
+18. footer + p subclass & clearfix
+19. media queries
 */
 
 /* 
 TODO
 links on home, portfolio
-make table on services
-experiment with more box shadows, more visual effects
+more table styling?
+experiment with more visual effects... 
 use javascript on one page
 HTML and CSS validation
 
@@ -62,7 +64,7 @@ body {
     justify-content: space-between;
 }
 .top{
-    background-image: url(../images/CamScanner\ 06-04-2022\ 09.30_1.jpg);
+    background-image: url(../images/logo.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
@@ -118,6 +120,10 @@ h1{
     border: 10px solid #D0BF8D;
     margin-right: 30%;
     margin-left: 30%;
+
+}
+.centerframe img{
+    width: 40%;
 }
 
 .gallery{
@@ -138,9 +144,8 @@ h1{
     font-weight: bold;
 }
 .gallery-item:hover{
-    box-shadow: 0 0 10px #998B62;
+    box-shadow: 0 0 15px #998B62;
     /* cursor: pointer; */
-    /* csciprojects.us */
 }
 
 hr{
@@ -152,6 +157,14 @@ dt{
 dl{
     padding: 10px;
     background-color: lightgray;
+}
+
+table, th, tr, td{
+    padding: 5px;
+    border: solid 2px #D0BF8D;
+}
+th{
+    background-color: #D0BF8D;
 }
 
 .exhibition{
@@ -177,3 +190,46 @@ footer p{
 .clearfix{
     clear: both;
 } 
+
+@media only all and (max-width: 900px){
+ .gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+}
+
+@media only all and (max-width: 650px){
+    #wrapper{
+        width: 95%;
+    }
+    .exhibition{
+        display: none;
+    }
+    .twocolumn{
+        display: block;
+    }
+    .column{
+        margin: 5px;
+        padding: 5px;
+    }
+    .centerframe img{
+        width: 100%;
+    }
+    .center{
+        margin: 0px;
+        margin-top: 5px;
+    }
+    .top{
+        display: none;
+    }
+    .banner{
+        display: block;
+    }
+    .gallery{
+        display: block;
+    }
+    .caption{
+        display: none;
+    }
+    
+}
