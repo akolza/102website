@@ -183,6 +183,9 @@ dl{
     padding: 10px;
     background-color: lightgray;
 }
+dd{
+    padding: 2px 0px
+}
 
 table, th, tr, td{
     padding: 5px;

@@ -11,12 +11,12 @@ function validateForm(){
     }
     if(email==""){
         alert("Email cannot be empty");
-        form.name.style.border='2px solid #A91C18';
+        form.email.style.border='2px solid #A91C18';
         return false;
     }
     if(comments==""){
         alert("Comments should not be empty");
-        form.name.style.border='2px solid #A91C18';
+        form.comments.style.border='2px solid #A91C18';
         return false;
     }
     return true;
