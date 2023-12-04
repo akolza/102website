@@ -1,7 +1,7 @@
 /* 
 Author: Ada Kolze
-Version: draft 1
-Date: 10/25/2023
+Version: final
+Date: 12/10/2023
 Website: sw.cs.wwu.edu/~kolzea/CS102/127/webproject/index.html
 */
 
@@ -26,17 +26,6 @@ Website: sw.cs.wwu.edu/~kolzea/CS102/127/webproject/index.html
 17. logo
 18. footer + p subclass & clearfix
 19. media queries
-*/
-
-/* 
-TODO
-links on home, portfolio
-more table styling?
-experiment with more visual effects... 
-use javascript on one page
-HTML and CSS validation
-hamburger
-
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400&family=Poppins:wght@300&family=Ubuntu+Mono:wght@400;700&display=swap');
@@ -167,6 +156,7 @@ h1{
 .gallery-item p{
     text-align: center;
     font-weight: bold;
+    padding: 0 2px;
 }
 .gallery-item:hover{
     box-shadow: 0 0 15px #998B62;
