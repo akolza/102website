@@ -6,6 +6,7 @@
     <title>Kolze :: Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -13,23 +14,43 @@
             <div class="banner">
                 <div class="top">
                 </div>
+                <a href="#" class="togglebtn" onclick="myHamburger(this)">
+                    <span class="bar"></span><br>
+                    <span class="bar"></span><br>
+                    <span class="bar"></span>
+                </a>
+                <img src="images/logo.jpg" class="brand" alt="logo">
                 <nav>
-                    <ul>
+                    <ul class="navlinks">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="inspiration.html">Inspiration</a></li>
                     </ul>
-                </nav>
-                
+                </nav> 
+                <div class="clearfix"></div>
             </div>
  
         </header>
 
         <main>
             <h1>HOME</h1>
-            <p>Welcome to A Kolze arts. </p>
+            <p class="homet">Welcome to A Kolze arts. Please explore the pages on my website.</p>
+
+            <form action="input.html" method="POST">
+                <h3>Visitor Input</h3>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <br>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <br>
+                <textarea name="comments" id="comments" placeholder="Comments"></textarea>
+                <br>
+                <a href="input.html" onclick="return validateForm()" class="button">Submit</a>
+            </form>
+            <br>
+            <p class="homet">Be mindful! Learn more about copyright protection laws <a href="https://www.copyright.gov/what-is-copyright/">here</a>.</p>
+
             <div class="exhibition">
                 <img src="images/exhibition.jpg" width="100%" alt="exhibition">
             </div>
@@ -38,7 +59,11 @@
 
         <footer>
             <img src="images/logo.jpg" class="logo" alt="logo">
-            <p>Ada Kolze Arts <br> &copy; 2023 
+            <p>Ada Kolze Arts <br> Copyright &copy; 2023 <br> Last modified on
+            <script>
+                var date = document.lastModified;
+                document.write(date);
+            </script>
             </p>
             <div class="clearfix"></div>
         </footer>

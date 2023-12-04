@@ -6,6 +6,7 @@
     <title>Kolze :: Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -13,8 +14,14 @@
             <div class="banner">
                 <div class="top">
                 </div>
+                <a href="#" class="togglebtn" onclick="myHamburger(this)">
+                    <span class="bar"></span><br>
+                    <span class="bar"></span><br>
+                    <span class="bar"></span>
+                </a>
+                <img src="images/logo.jpg" class="brand" alt="logo">
                 <nav>
-                    <ul>
+                    <ul class="navlinks">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
@@ -32,31 +39,31 @@
             <h1>PORTFOLIO</h1>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="images/AKMosaicofaPersonOrganizing.JPG" alt="Bottlecap Mosaic">
+                    <img src="images/AKMosaicofaPersonOrganizing.JPG" alt="Bottlecap Mosaic" onclick="changeSize(this)">
                     <p>"Mosaic of Person Organizing" / Bottle Caps, Copper Foil, and Hotglue on Plywood, 35 x 35 x 35 cm</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKPassionofMany.JPG" alt="Passion of Many painting">
+                    <img src="images/AKPassionofMany.JPG" alt="Passion of Many painting" onclick="changeSize(this)">
                     <p>"Passion of Many" / Acrylic Paint, Stamp Ink, and Sharpie on Mixed Media Paper / 48 x 38 cm</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKChunkofTime.jpg" alt="Chunk of Time window">
+                    <img src="images/AKChunkofTime.jpg" alt="Chunk of Time window" onclick="changeSize(this)">
                     <p>"Chunk of Time" / Acrylic, Gesso, Elmer's Glue, and Sharpie on Plexiglass / 50 x 52 cm</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKBallroomDancing.jpg" alt="Ballroom Dancing quilt">
+                    <img src="images/AKBallroomDancing.jpg" alt="Ballroom Dancing quilt" onclick="changeSize(this)">
                     <p>"Ballroom Dancing" / Fabric, Glass Beads, Yarn, and Thread / 107 x 94 cm </p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKGetUp.jpg" alt="Get Up painting">
+                    <img src="images/AKGetUp.jpg" alt="Get Up painting" onclick="changeSize(this)">
                     <p>"Get Up" / Acrylic and Bottle Caps on Particle Board / 121 x 70 cm</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKPatchesofComfort.JPG" alt="Patches painting">
+                    <img src="images/AKPatchesofComfort.JPG" alt="Patches painting" onclick="changeSize(this)">
                     <p>"Patches of Comfort" / Acrylic Paint on Mixed Media Paper / 46 x 61 cm</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/AKVulnerableRelationship.jpg" alt="Vulnerable Painting">
+                    <img src="images/AKVulnerableRelationship.jpg" alt="Vulnerable Painting" onclick="changeSize(this)">
                     <p>"Vulnerable Relationship" / Watercolor on Watercolor Paper / 60 x 29 cm</p>
                 </div>
                 
@@ -66,7 +73,11 @@
 
         <footer>
             <img src="images/logo.jpg" class="logo" alt="logo">
-            <p>Ada Kolze Arts <br> &copy; 2023 
+            <p>Ada Kolze Arts <br> Copyright &copy; 2023 <br> Last modified on
+                <script>
+                    var date = document.lastModified;
+                    document.write(date);
+                </script>
             </p>
             <div class="clearfix"></div>
         </footer>

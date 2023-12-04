@@ -6,6 +6,7 @@
     <title>Kolze :: Inspiration</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -13,8 +14,14 @@
             <div class="banner">
                 <div class="top">
                 </div>
+                <a href="#" class="togglebtn" onclick="myHamburger(this)">
+                    <span class="bar"></span><br>
+                    <span class="bar"></span><br>
+                    <span class="bar"></span>
+                </a>
+                <img src="images/logo.jpg" class="brand" alt="logo">
                 <nav>
-                    <ul>
+                    <ul class="navlinks">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
@@ -70,7 +77,11 @@
 
         <footer>
             <img src="images/logo.jpg" class="logo" alt="logo">
-            <p>Ada Kolze Arts <br> &copy; 2023 
+            <p>Ada Kolze Arts <br> Copyright &copy; 2023 <br> Last modified on
+                <script>
+                    var date = document.lastModified;
+                    document.write(date);
+                </script>
             </p>
             <div class="clearfix"></div>
         </footer>
